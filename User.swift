@@ -10,7 +10,7 @@ import Foundation
 
 class User {
     
-    // example of twitter attributes
+    // example attributes
     var handleName: String?
     var bio: String?
     var userName: String?

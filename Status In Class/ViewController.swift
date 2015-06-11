@@ -117,9 +117,41 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let jsonObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as! NSArray
         println(jsonObject)
         
+        updates = [Update]()
+        
+        // loop in the dictionary
+        for var i = 0; i < jsonObject.count; i++ {
+            // store dictionary from the array
+            let updateJSON = jsonObject[i] as! [String: AnyObject]
+            //
+            let text = updateJSON["text"] as! String
+            let date = updateJSON["date"] as! Int
+            let userJSON = updateJSON["user"] as! [String: AnyObject]
+            let link = userJSON["link"] as! String
+            let name = userJSON["name"] as! String
+            let username = userJSON["username"] as! String
+            let city = userJSON["city"] as! String
+            let bio = userJSON["bio"] as! String
+            
+            var update = Update()
+            update.text = text
+            // TODO: Convert date integer to NSDate
+            
+            var user = User()
+            user.handleName = name
+            user.userName = username
+            user.city = city
+            user.bio = bio
+            user.link = link
+            
+            update.user = user
+            
+            updates?.append(update)
+            
+            println(updateJSON)
+        }
+        tableView.reloadData()
+        
     }
-
-
-
 }
 
