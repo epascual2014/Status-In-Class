@@ -15,6 +15,8 @@
 		614BC0FF1B267AE300F21ED2 /* Status_In_ClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BC0FE1B267AE300F21ED2 /* Status_In_ClassTests.swift */; };
 		614BC1091B267EFB00F21ED2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BC1081B267EFB00F21ED2 /* User.swift */; };
 		614BC10B1B26800E00F21ED2 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BC10A1B26800E00F21ED2 /* Update.swift */; };
+		614BC10E1B26955700F21ED2 /* UpdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BC10C1B26955700F21ED2 /* UpdateTableViewCell.swift */; };
+		614BC10F1B26955700F21ED2 /* UpdateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614BC10D1B26955700F21ED2 /* UpdateTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		614BC0FE1B267AE300F21ED2 /* Status_In_ClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status_In_ClassTests.swift; sourceTree = "<group>"; };
 		614BC1081B267EFB00F21ED2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
 		614BC10A1B26800E00F21ED2 /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Update.swift; path = ../Update.swift; sourceTree = "<group>"; };
+		614BC10C1B26955700F21ED2 /* UpdateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCell.swift; sourceTree = "<group>"; };
+		614BC10D1B26955700F21ED2 /* UpdateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				614BC10A1B26800E00F21ED2 /* Update.swift */,
 				614BC0E81B267AE300F21ED2 /* AppDelegate.swift */,
 				614BC0EA1B267AE300F21ED2 /* ViewController.swift */,
+				614BC10C1B26955700F21ED2 /* UpdateTableViewCell.swift */,
+				614BC10D1B26955700F21ED2 /* UpdateTableViewCell.xib */,
 				614BC0EC1B267AE300F21ED2 /* Main.storyboard */,
 				614BC0EF1B267AE300F21ED2 /* Images.xcassets */,
 				614BC0F11B267AE300F21ED2 /* LaunchScreen.xib */,
@@ -200,6 +206,7 @@
 			files = (
 				614BC0EE1B267AE300F21ED2 /* Main.storyboard in Resources */,
 				614BC0F31B267AE300F21ED2 /* LaunchScreen.xib in Resources */,
+				614BC10F1B26955700F21ED2 /* UpdateTableViewCell.xib in Resources */,
 				614BC0F01B267AE300F21ED2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				614BC0EB1B267AE300F21ED2 /* ViewController.swift in Sources */,
+				614BC10E1B26955700F21ED2 /* UpdateTableViewCell.swift in Sources */,
 				614BC0E91B267AE300F21ED2 /* AppDelegate.swift in Sources */,
 				614BC10B1B26800E00F21ED2 /* Update.swift in Sources */,
 				614BC1091B267EFB00F21ED2 /* User.swift in Sources */,
