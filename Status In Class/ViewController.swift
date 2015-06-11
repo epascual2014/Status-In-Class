@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
-    var updates: [Update]?
+    var updates = [Update]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,8 +116,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // store jsonObject
         let jsonObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as! NSArray
         println(jsonObject)
-        
-        updates = [Update]()
         
         // loop in the dictionary
         for var i = 0; i < jsonObject.count; i++ {
