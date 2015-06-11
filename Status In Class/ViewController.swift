@@ -106,12 +106,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    // MARK: NSURLConnectionDataDelegate
+    // MARK: NSURLConnectionDataDelegate - when requesting data, it responds back that it has received it.
     
     func connection(connection: NSURLConnection, didReceiveData data: NSData) {
-        println(data)
-        println(connection)
-        //NSURLConnectionDelegate.connection(self)
+        // check if data is connecting
+        // println(data)
+        // println(connection)
+        
+        // store jsonObject
+        let jsonObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as! NSArray
+        println(jsonObject)
         
     }
 
