@@ -17,6 +17,7 @@
 		614BC10B1B26800E00F21ED2 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BC10A1B26800E00F21ED2 /* Update.swift */; };
 		614BC10E1B26955700F21ED2 /* UpdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BC10C1B26955700F21ED2 /* UpdateTableViewCell.swift */; };
 		614BC10F1B26955700F21ED2 /* UpdateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614BC10D1B26955700F21ED2 /* UpdateTableViewCell.xib */; };
+		618A38141B2FC540001C9EF6 /* Status.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 618A38121B2FC540001C9EF6 /* Status.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		614BC10A1B26800E00F21ED2 /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Update.swift; path = ../Update.swift; sourceTree = "<group>"; };
 		614BC10C1B26955700F21ED2 /* UpdateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCell.swift; sourceTree = "<group>"; };
 		614BC10D1B26955700F21ED2 /* UpdateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateTableViewCell.xib; sourceTree = "<group>"; };
+		618A38131B2FC540001C9EF6 /* Status.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Status.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				614BC10A1B26800E00F21ED2 /* Update.swift */,
 				614BC0E81B267AE300F21ED2 /* AppDelegate.swift */,
 				614BC0EA1B267AE300F21ED2 /* ViewController.swift */,
+				618A38121B2FC540001C9EF6 /* Status.xcdatamodeld */,
 				614BC10C1B26955700F21ED2 /* UpdateTableViewCell.swift */,
 				614BC10D1B26955700F21ED2 /* UpdateTableViewCell.xib */,
 				614BC0EC1B267AE300F21ED2 /* Main.storyboard */,
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				614BC0EB1B267AE300F21ED2 /* ViewController.swift in Sources */,
+				618A38141B2FC540001C9EF6 /* Status.xcdatamodeld in Sources */,
 				614BC10E1B26955700F21ED2 /* UpdateTableViewCell.swift in Sources */,
 				614BC0E91B267AE300F21ED2 /* AppDelegate.swift in Sources */,
 				614BC10B1B26800E00F21ED2 /* Update.swift in Sources */,
@@ -427,6 +431,7 @@
 				614BC1041B267AE300F21ED2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		614BC1051B267AE300F21ED2 /* Build configuration list for PBXNativeTarget "Status In ClassTests" */ = {
 			isa = XCConfigurationList;
@@ -435,8 +440,22 @@
 				614BC1071B267AE300F21ED2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		618A38121B2FC540001C9EF6 /* Status.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				618A38131B2FC540001C9EF6 /* Status.xcdatamodel */,
+			);
+			currentVersion = 618A38131B2FC540001C9EF6 /* Status.xcdatamodel */;
+			path = Status.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 614BC0DB1B267AE300F21ED2 /* Project object */;
 }
