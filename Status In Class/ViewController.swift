@@ -22,8 +22,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
         tableView.delegate = self
         
+        
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         // create a var to set the http site to grab the json file
         var urlString = "https://rawgit.com/jamescmartinez/Status/master/updates.json"
+        
         // Must pass strings into NSURL, since strings are not as basic just using a string
         let url = NSURL(string: urlString)
         
@@ -33,7 +41,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // set connection
         let connection = NSURLConnection(request: request, delegate: self, startImmediately: true)
         
+
         
+        
+    }
+        
+    
         
         
         // TODO: Remove sample data once real data is created
@@ -56,7 +69,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //            // store data
 //            updates?.append(update)
 //        }
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -69,12 +81,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // check to see if update is nil
-        if let updatesCount = updates?.count {
-            return updatesCount
-        }
-        // return nothing and ends program
-        return 0
-    }
+            return updates.count
+
+            }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -82,17 +91,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // TODO: Make cell reuseable
         
         
-        var cell = NSBundle.mainBundle().loadNibNamed("UpdateTableViewCell", owner: self, options: nil).first as! UpdateTableViewCell        
+        var cell = NSBundle.mainBundle().loadNibNamed("UpdateTableViewCell", owner: self, options: nil).first as! UpdateTableViewCell
         
         //var cell = UpdateTableViewCell()
-        if let updates = updates {
-            var update = updates[indexPath.row]
-            cell.updateTextLabel?.text = update.text
-            
-            if let user = update.user {
-                cell.handleNameLabel.text = user.handleName
-                cell.userNameLabel.text = user.userName
-            }
+        var update = updates[indexPath.row]
+        cell.updateTextLabel?.text = update.text
+        
+        if let user = update.user {
+            cell.handleNameLabel.text = user.handleName
+            cell.userNameLabel.text = user.userName
         }
         return cell
     }
@@ -117,14 +124,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let jsonObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as! NSArray
         println(jsonObject)
         
+        
+        
         // loop in the dictionary
         for var i = 0; i < jsonObject.count; i++ {
             // store dictionary from the array
             let updateJSON = jsonObject[i] as! [String: AnyObject]
+            
             //
             let text = updateJSON["text"] as! String
             let date = updateJSON["date"] as! Int
             let userJSON = updateJSON["user"] as! [String: AnyObject]
+            
+            
             let link = userJSON["link"] as! String
             let name = userJSON["name"] as! String
             let username = userJSON["username"] as! String
@@ -144,7 +156,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             update.user = user
             
-            updates?.append(update)
+            updates.append(update)
             
             println(updateJSON)
         }
