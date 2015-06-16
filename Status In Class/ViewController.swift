@@ -97,10 +97,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var update = updates[indexPath.row]
         cell.updateTextLabel?.text = update.text
         
-        if let user = update.user {
+        
+        // if let must be removed since User is permanent (not optional)
+        let user = update.user
             cell.handleNameLabel.text = user.handleName
             cell.userNameLabel.text = user.userName
-        }
         return cell
     }
     

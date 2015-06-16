@@ -13,10 +13,10 @@
 		614BC0F01B267AE300F21ED2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 614BC0EF1B267AE300F21ED2 /* Images.xcassets */; };
 		614BC0F31B267AE300F21ED2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614BC0F11B267AE300F21ED2 /* LaunchScreen.xib */; };
 		614BC0FF1B267AE300F21ED2 /* Status_In_ClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BC0FE1B267AE300F21ED2 /* Status_In_ClassTests.swift */; };
-		614BC1091B267EFB00F21ED2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BC1081B267EFB00F21ED2 /* User.swift */; };
-		614BC10B1B26800E00F21ED2 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BC10A1B26800E00F21ED2 /* Update.swift */; };
 		614BC10E1B26955700F21ED2 /* UpdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BC10C1B26955700F21ED2 /* UpdateTableViewCell.swift */; };
 		614BC10F1B26955700F21ED2 /* UpdateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614BC10D1B26955700F21ED2 /* UpdateTableViewCell.xib */; };
+		6172E4611B2FCE7D006A0E9A /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172E4601B2FCE7D006A0E9A /* Update.swift */; };
+		6172E4631B2FCE7E006A0E9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172E4621B2FCE7E006A0E9A /* User.swift */; };
 		618A38141B2FC540001C9EF6 /* Status.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 618A38121B2FC540001C9EF6 /* Status.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -41,10 +41,10 @@
 		614BC0F81B267AE300F21ED2 /* Status In ClassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Status In ClassTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		614BC0FD1B267AE300F21ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		614BC0FE1B267AE300F21ED2 /* Status_In_ClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status_In_ClassTests.swift; sourceTree = "<group>"; };
-		614BC1081B267EFB00F21ED2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
-		614BC10A1B26800E00F21ED2 /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Update.swift; path = ../Update.swift; sourceTree = "<group>"; };
 		614BC10C1B26955700F21ED2 /* UpdateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCell.swift; sourceTree = "<group>"; };
 		614BC10D1B26955700F21ED2 /* UpdateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateTableViewCell.xib; sourceTree = "<group>"; };
+		6172E4601B2FCE7D006A0E9A /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
+		6172E4621B2FCE7E006A0E9A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		618A38131B2FC540001C9EF6 /* Status.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Status.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,8 +87,6 @@
 		614BC0E51B267AE300F21ED2 /* Status In Class */ = {
 			isa = PBXGroup;
 			children = (
-				614BC1081B267EFB00F21ED2 /* User.swift */,
-				614BC10A1B26800E00F21ED2 /* Update.swift */,
 				614BC0E81B267AE300F21ED2 /* AppDelegate.swift */,
 				614BC0EA1B267AE300F21ED2 /* ViewController.swift */,
 				618A38121B2FC540001C9EF6 /* Status.xcdatamodeld */,
@@ -97,6 +95,8 @@
 				614BC0EC1B267AE300F21ED2 /* Main.storyboard */,
 				614BC0EF1B267AE300F21ED2 /* Images.xcassets */,
 				614BC0F11B267AE300F21ED2 /* LaunchScreen.xib */,
+				6172E4621B2FCE7E006A0E9A /* User.swift */,
+				6172E4601B2FCE7D006A0E9A /* Update.swift */,
 				614BC0E61B267AE300F21ED2 /* Supporting Files */,
 			);
 			path = "Status In Class";
@@ -230,10 +230,10 @@
 			files = (
 				614BC0EB1B267AE300F21ED2 /* ViewController.swift in Sources */,
 				618A38141B2FC540001C9EF6 /* Status.xcdatamodeld in Sources */,
+				6172E4631B2FCE7E006A0E9A /* User.swift in Sources */,
+				6172E4611B2FCE7D006A0E9A /* Update.swift in Sources */,
 				614BC10E1B26955700F21ED2 /* UpdateTableViewCell.swift in Sources */,
 				614BC0E91B267AE300F21ED2 /* AppDelegate.swift in Sources */,
-				614BC10B1B26800E00F21ED2 /* Update.swift in Sources */,
-				614BC1091B267EFB00F21ED2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
