@@ -11,7 +11,6 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate {
     
-
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,6 +21,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        
+        // referance appDelegate class to our data
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        // put saved context into the manageObjectContext box
+        let context = appDelegate.managedObjectContext!
+        
+        let entityDescription = NSEntityDescription.entityForName("Update", inManagedObjectContext: context)
+        
+        let fetchRequest = NSFetchRequest(entityName: "Update")
+        fetchRequest.entity = entityDescription
+        fetchRequest.predicate = NSPredicate(format: "text != nil")
+        
+        let results = context.executeFetchRequest(fetchRequest, error: nil) as! [Update]
+        updates = results
+        
+        
+        
         
         
         
