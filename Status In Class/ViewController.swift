@@ -153,7 +153,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let context = appDelegate.managedObjectContext!
             
             //
-            let update = NSEntityDescription.insertNewObjectForEntityForName("Update", inManagedObjectContext: context) as! Update
+            let update = Update.newObjectInContext(context) as! Update
             
             // create a entity name for NSEntityDescription
             let updateEntityDescription = NSEntityDescription()
@@ -166,7 +166,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             // TODO: Convert date integer to NSDate
             
             //
-            let user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: context) as! User
+            let user = User.newObjectInContext(context) as! User
             
             
             // update the entity description to match the user file
