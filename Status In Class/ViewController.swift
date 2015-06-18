@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Edrick Pascual. All rights reserved.
 //
 
+import CoreData
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate {
@@ -144,11 +145,38 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let city = userJSON["city"] as! String
             let bio = userJSON["bio"] as! String
             
-            var update = Update()
+            
+            // use to reference the manageobjectcontext from the AppDelegate class
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            
+            // put saved context into the manageObjectContext box
+            let context = appDelegate.managedObjectContext!
+            
+            //
+            let update = NSEntityDescription.insertNewObjectForEntityForName("Update", inManagedObjectContext: context) as! Update
+            
+            // create a entity name for NSEntityDescription
+            let updateEntityDescription = NSEntityDescription()
+            updateEntityDescription.name = "Update"
+            
+            // pass the entity to the var update to recognize the relatioship of the NSEntity
+            //var update = Update(entity: updateEntityDescription, insertIntoManagedObjectContext: nil)
+            
             update.text = text
             // TODO: Convert date integer to NSDate
             
-            var user = User()
+            //
+            let user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: context) as! User
+            
+            
+            // update the entity description to match the user file
+            let userEntityDescription = NSEntityDescription()
+            userEntityDescription.name = "User"
+            
+            // remove this variable once NSEntityDescription has been added above
+            //var user = User(entity: userEntityDescription, insertIntoManagedObjectContext: nil)
+            
+            
             user.handleName = name
             user.userName = username
             user.city = city
@@ -158,6 +186,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             update.user = user
             
             updates.append(update)
+            
+            // save the context - all the data is moved from the temporary box into a final saving point
+            appDelegate.saveContext()
             
             println(updateJSON)
         }
